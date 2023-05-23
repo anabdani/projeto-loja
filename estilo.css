@@ -1,0 +1,51 @@
+@charset  "UTF-8";
+
+.showcase {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    
+
+}
+.showcase  {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    text-decoration: none;
+    box-shadow: 2px 1px  6px 6px rgba(0, 0, 0, 0.322);
+}
+.title {
+    width: 100%;
+    height: 15%;
+    font-size: 50px;
+    color:black;
+    mix-blend-mode: multiply;
+    margin: 10px;
+   margin: auto ;
+   
+   
+    
+}
+h1 {
+    text-align: center;
+}
+.favicon{
+    border-radius: 50%;
+}
+
+html {
+    padding:3rem;
+    background-color: #212123d2;
+    color: #efefef;
+}
+img {
+   border-radius: 50%;
+   width: 200px;
+   margin: auto;
+   display: flex;
+   box-shadow: 2px 1px 6px 6px rgba(255, 255, 255, 0.288);
+   margin-top: 20px;
+}
