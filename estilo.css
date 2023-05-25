@@ -55,7 +55,7 @@ html {
     overflow: hidden;
 }
 .slides {
-    width: 450%;
+    width:400%;
     height: 320px;
     display: flex;
 }
@@ -63,7 +63,7 @@ html {
     display: none;
 }
 .slide {
-    width: 8%;
+    width: 230px;
     position: relative;
 }
 .slide img {
@@ -71,7 +71,7 @@ html {
 }
 .manual-navgation {
     position: absolute;
-    width: 800px;
+    width: 700px;
     margin-top: -40px;
     display:flex;
     justify-content: center;
@@ -90,29 +90,37 @@ html {
     background-color: white;
 }
 #radio1:checked ~  .first{
-    margin-left: 0px;
+    margin-left: 5px;
 }
 #radio2:checked ~  .first{
     margin-left: -25%;
 }
 #radio3:checked ~  .first{
-    margin-left: -60px;
+    margin-left: -50px;
 }
 #radio4:checked ~  .first{
-    margin-left: 0px;
+    margin-left: -75px;
 }
 #radio5:checked ~  .first{
-    margin-left: 0px;
+    margin-left: -90px;
 }
-#radio6:checked ~  .first{
-    margin-left: 0px;
+.navigatiom-auto div {
+    border: 2px 2px 1px 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }
-#radio7:checked ~  .first{
-    margin-left: 0px;
+.navigation-auto {
+    position: absolute;
+    width: 700px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
 }
-#radio8:checked ~  .first{
-    margin-left: 0px;
+.navigation-auto div:not(:last-child) {
+        margin-right: 30px;
 }
-#radio9:checked ~  .first{
-    margin-left: 0px;
+#menu {
+    color: white;
 }
