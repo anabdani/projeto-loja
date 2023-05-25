@@ -4,8 +4,6 @@
     width: 50%;
     height: 50%;
     position: relative;
-    
-
 }
 .showcase  {
     width: 100%;
@@ -24,28 +22,97 @@
     color:black;
     mix-blend-mode: multiply;
     margin: 10px;
-   margin: auto ;
-   
-   
-    
+   margin: auto ; 
 }
 h1 {
     text-align: center;
 }
-.favicon{
-    border-radius: 50%;
+h2 {
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
 }
-
+h3 {
+    font-size: 25px;
+    color: white;
+}
 html {
     padding:3rem;
     background-color: #212123d2;
     color: #efefef;
 }
-img {
+#imagem {
    border-radius: 50%;
    width: 200px;
    margin: auto;
    display: flex;
    box-shadow: 2px 1px 6px 6px rgba(255, 255, 255, 0.288);
    margin-top: 20px;
+}
+.slider {
+    margin: 0 auto;
+    width: 690px;
+    height: 320px;
+    overflow: hidden;
+}
+.slides {
+    width: 450%;
+    height: 320px;
+    display: flex;
+}
+.slides input {
+    display: none;
+}
+.slide {
+    width: 8%;
+    position: relative;
+}
+.slide img {
+    width: 200px;
+}
+.manual-navgation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display:flex;
+    justify-content: center;
+}
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius:10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+.manual-btn:hover {
+    background-color: white;
+}
+#radio1:checked ~  .first{
+    margin-left: 0px;
+}
+#radio2:checked ~  .first{
+    margin-left: -25%;
+}
+#radio3:checked ~  .first{
+    margin-left: -60px;
+}
+#radio4:checked ~  .first{
+    margin-left: 0px;
+}
+#radio5:checked ~  .first{
+    margin-left: 0px;
+}
+#radio6:checked ~  .first{
+    margin-left: 0px;
+}
+#radio7:checked ~  .first{
+    margin-left: 0px;
+}
+#radio8:checked ~  .first{
+    margin-left: 0px;
+}
+#radio9:checked ~  .first{
+    margin-left: 0px;
 }
