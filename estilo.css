@@ -118,3 +118,14 @@ html {
 #menu {
     color: white;
 }
+#produtos,
+#carrinho {
+    max-width: 900px;
+    margin: 0  ;
+    padding: 0 20px;
+    display: flex;
+}
+.produto-single {
+   width: 33.3%;
+   padding: 0 20px;
+}

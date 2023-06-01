@@ -28,18 +28,16 @@
          <input type="radio" name="radio-btn" id="radio1">
          <input type="radio" name="radio-btn" id="radio2">
          <input type="radio" name="radio-btn" id="radio3">
-         <input type="radio" name="radio-btn" id="radio4">
-         <input type="radio" name="radio-btn" id="radio5">
 
             <!--slide imagens-->
            <div class="slide first">
                 <img src="tamanho P/camisa 1.jpeg" alt="imagem 1">
             </div>
             <div class="slide">
-                <img src="tamanho P/camisa 2.jpeg" alt="imagem 2">
+                <img src="tamanho M/camisa 4.jpeg" alt="imagem 2">
             </div>
             <div class="slide">
-                <img src="tamanho P/camisa 3.jpeg" alt="imagem 3">
+                <img src="tamanho G/WhatsApp Image 2023-05-23 at 14.15.41 (1).jpeg" alt="imagem 3">
             </div>
             <div class="slide">
                 <img src="tamanho P/camisa 15.jpeg" alt="imagem 4">
@@ -57,12 +55,7 @@
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
                 <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-                <div class="auto-btn5"></div>
-                <div class="auto-btn6"></div>
-                <div class="auto-btn7"></div>
-                <div class="auto-btn8"></div>
-                <div class="auto-btn9"></div>
+            
             </div>
     </div>
     <div class="manual-navgation">
@@ -71,6 +64,73 @@
              
     </div>
  </div>
+      <!---carrinho-->
+      <h2>Vitrine:</h2>
+    <div id="produtos">
+          
+    </div>
+    <div id="carrinho">
+       <h2>Carrinho:</h2>
+    </div>
+    <script>
+        const items = [
+            {
+                id: 0,
+                nome: 'camiseta',
+                img: 'imagem.jpg',
+                quantidade: 0
+            },
+            {
+                id: 1,
+                nome: 'short',
+                img: 'imagem.jpg',
+                quantidade: 0
+            },
+            {
+                id: 2,
+                nome: 'sapato',
+                img: 'imagem.jpg',
+                quantidade: 0
+            },
+        ]
+        inicializarLoja = () => {
+            var containerProdutos = document.getElementById('produtos');
+            items.map((val)=>{
+            containerProdutos.innerHTML+= `
+              
+            <div class="produtos-single">
+                <img src="`+val.img+`" />
+                <p>`+val.nome+`</p>
+                <a key="`+val.id+`" href="">Adicionar ao carrinho!<a/>
+            </div>
+
+            `;
+            })
+        }
+        inicializarLoja();
+
+        atualizarCarrinho = () => {
+            var containercarrinho = document.getElementById('carrinho');
+            containercarrinho.innerHTML = "";
+            items.map((val)=>{
+            containercarrinho.innerHTML+= `
+              
+           <p>`+val.nome+` | quantidade: `+val.quantidade+`</p>
+              <hr>
+            `;
+            })
+        }
+        var links = document.getElementsByTagName('a');
+
+        for(var i = 0; i < links.length; i++){
+            links[i].addEventListener("click",function(){
+                let key = this.getAttribute('key');
+                items[key].quantidade++;   
+                atualizarCarrinho(); 
+                return false;      
+            })
+        }
+    </script>
  <script src="script.js"></script>
 </body>
 </html>
