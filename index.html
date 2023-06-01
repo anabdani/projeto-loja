@@ -19,7 +19,7 @@
       <img id="imagem" src="logo.jpeg" alt="logo">
     </nav>
    
- <h2>Nosso Catálogo:</h2>
+ <h2>Nossa Vitrine:</h2>
  
  <div class="slider">
 
@@ -66,71 +66,83 @@
  </div>
       <!---carrinho-->
       <h2>Vitrine:</h2>
-    <div id="produtos">
-          
-    </div>
-    <div id="carrinho">
-       <h2>Carrinho:</h2>
-    </div>
-    <script>
-        const items = [
-            {
-                id: 0,
-                nome: 'camiseta',
-                img: 'imagem.jpg',
-                quantidade: 0
-            },
-            {
-                id: 1,
-                nome: 'short',
-                img: 'imagem.jpg',
-                quantidade: 0
-            },
-            {
-                id: 2,
-                nome: 'sapato',
-                img: 'imagem.jpg',
-                quantidade: 0
-            },
-        ]
-        inicializarLoja = () => {
-            var containerProdutos = document.getElementById('produtos');
-            items.map((val)=>{
-            containerProdutos.innerHTML+= `
+
+      <div id="produtos">
+      
+      </div><!--produtos-->
+      
+      <h2>Carrinho:</h2>
+  
+      <div id="carrinho">
+      
+      </div><!--carrinho-->
+  
+      <script>
+          const items =  [
+              {
+                  id: 0,
+                  nome: 'camisas P',
+                  img: 'imagem.jpg',
+                  quantidade: 0
+              },
+  
+              {
+                  id: 1,
+                  nome: 'camisas M',
+                  img: 'imagem.jpg',
+                  quantidade: 0
+              },
               
-            <div class="produtos-single">
-                <img src="`+val.img+`" />
-                <p>`+val.nome+`</p>
-                <a key="`+val.id+`" href="">Adicionar ao carrinho!<a/>
-            </div>
+              {
+                  id: 2,
+                  nome: 'camisas G',
+                  img: 'imagem.jpg',
+                  quantidade: 0
+              },
+          ]
+  
+          inicializarLoja = () => {
+              var containerProdutos = document.getElementById('produtos');
+              items.map((val)=>{
+                  containerProdutos.innerHTML+= `
+                  <div class="produto-single">
+                      <img src="`+val.img+`" />
+                      <p>`+val.nome+`</p>
+                      <a key="`+val.id+`" href="#">Adicionar ao carrinho!<a/>
+                  </div>
+                  ` 
+              })
+          }
+  
+          inicializarLoja();
+  
+          atualizarCarrinho = () => {
+              var containerCarrinho = document.getElementById('carrinho'); 
+              containerCarrinho.innerHTML = "";
+              items.map((val) => {
+                  if(val.quantidade > 0){
+                  containerCarrinho.innerHTML+= `
+                  <p>`+val.nome+` | quantidade: `+val.quantidade+`</p>
+                  <hr>
+                  `;
+                  } 
+              })
+  
+          }
+  
+          var links = document.getElementsByTagName('a');
+  
+          for(var i = 0; i < links.length; i++){
+              links[i].addEventListener("click",function(){
+                  let key = this.getAttribute('key');
+                  items[key].quantidade++;
+                  atualizarCarrinho();
+                  return false;
+              })
+  
+          }
 
-            `;
-            })
-        }
-        inicializarLoja();
-
-        atualizarCarrinho = () => {
-            var containercarrinho = document.getElementById('carrinho');
-            containercarrinho.innerHTML = "";
-            items.map((val)=>{
-            containercarrinho.innerHTML+= `
-              
-           <p>`+val.nome+` | quantidade: `+val.quantidade+`</p>
-              <hr>
-            `;
-            })
-        }
-        var links = document.getElementsByTagName('a');
-
-        for(var i = 0; i < links.length; i++){
-            links[i].addEventListener("click",function(){
-                let key = this.getAttribute('key');
-                items[key].quantidade++;   
-                atualizarCarrinho(); 
-                return false;      
-            })
-        }
-    </script>
+      </script>
  <script src="script.js"></script>
 </body>
 </html>
