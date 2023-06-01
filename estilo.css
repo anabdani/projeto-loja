@@ -115,17 +115,24 @@ html {
 .navigation-auto div:not(:last-child) {
         margin-right: 30px;
 }
-#menu {
-    color: white;
-}
-#produtos,
-#carrinho {
+
+#produtos{
     max-width: 900px;
-    margin: 0  ;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 2%;
     display: flex;
+    text-align: center;
 }
-.produto-single {
-   width: 33.3%;
-   padding: 0 20px;
+
+#carrinho{
+    max-width: 900px;
+    margin: 10px;
+    padding: 0 2%;
+    display: block;
+    height: 30px;
+}        
+
+.produto-single{
+    width: 365px;
+    padding: 50px;
 }
