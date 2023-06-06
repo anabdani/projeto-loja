@@ -30,6 +30,8 @@ h1 {
 h2 {
     font-size: 35px;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 20px;
 }
 h3 {
     font-size: 25px;
@@ -47,14 +49,12 @@ html {
    display: flex;
    box-shadow: 2px 1px 6px 6px rgba(255, 255, 255, 0.288);
    margin-top: 20px;
-  
 }
 .slider {
     margin: 0 auto;
     width: 690px;
     height: 320px;
     overflow: hidden;
-   
 }
 .slides {
     width:400%;
@@ -70,7 +70,8 @@ html {
 }
 .slide img {
     width: 200px;
-    
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.562);
 }
 .manual-navgation {
     position: absolute;
@@ -98,6 +99,12 @@ html {
 #radio2:checked ~  .first{
     margin-left: -25%;
 }
+#radio3:checked ~  .first{
+    margin-left: -50%;
+}
+#radio4:checked ~  .first{
+    margin-left: -75%;
+}
 .navigatiom-auto div {
     border: 2px 2px 1px 1px solid black;
     padding: 5px;
@@ -115,6 +122,17 @@ html {
 .navigation-auto div:not(:last-child) {
         margin-right: 30px;
 }
+<<<<<<< HEAD
+.botão {
+    text-decoration: none;
+    color: white;
+    background: #008617;
+    padding: 10px 20px 10px 15px;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: -30px;
+=======
 
 #produtos{
     max-width: 900px;
@@ -126,7 +144,7 @@ html {
 
 #carrinho{
     max-width: 900px;
-    margin: 10px;
+    margin: 0 ;
     padding: 0 2%;
     display: block;
     height: 30px;
@@ -135,4 +153,5 @@ html {
 .produto-single{
     width: 365px;
     padding: 50px;
+>>>>>>> 9a01ff5d1a5d1d4fe7760b4e50a1f5ad01a81798
 }
