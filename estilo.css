@@ -122,7 +122,6 @@ html {
 .navigation-auto div:not(:last-child) {
         margin-right: 30px;
 }
-<<<<<<< HEAD
 .botão {
     text-decoration: none;
     color: white;
@@ -132,26 +131,4 @@ html {
     color: #fff;
     text-decoration: none;
     margin-left: -30px;
-=======
-
-#produtos{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2%;
-    display: flex;
-    text-align: center;
-}
-
-#carrinho{
-    max-width: 900px;
-    margin: 0 ;
-    padding: 0 2%;
-    display: block;
-    height: 30px;
-}        
-
-.produto-single{
-    width: 365px;
-    padding: 50px;
->>>>>>> 9a01ff5d1a5d1d4fe7760b4e50a1f5ad01a81798
 }
